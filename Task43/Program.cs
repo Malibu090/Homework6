@@ -23,7 +23,24 @@ array[3] = EnterNumber("Введите значение k2");
 // x = (b2 - b1) / (k1 - k2)
 // y = k1 * x + b1
 
-double x = (array[2] - array[0]) / (array[1] - array[3]);
-double y = ((array[2] - array[0]) / (array[1] - array[3])) * array[1] + array[0];
+// double x = (array[2] - array[0]) / (array[1] - array[3]);
+// double y = ((array[2] - array[0]) / (array[1] - array[3])) * array[1] + array[0];
 
+// ищем координаты X
+double FindX(double[] array)
+{
+    double num = (array[2] - array[0]) / (array[1] - array[3]);
+    return num;
+}
+
+
+// ищем координаты Y
+double FindY(double[] array)
+{
+    double num = ((array[2] - array[0]) / (array[1] - array[3])) * array[1] + array[0];
+    return num;
+}
+
+double x = FindX(array);
+double y = FindY(array);
 System.Console.WriteLine($"Точка перечесения двух прямых имеет координаты : ({x}, {y})");
